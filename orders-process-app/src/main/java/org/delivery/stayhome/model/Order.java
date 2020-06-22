@@ -16,7 +16,10 @@ public class Order implements java.io.Serializable {
     private Boolean acceptedByRestaurant;
     private Boolean readyToDeliver;
     private Boolean delivered;
-    private String observations;
+	private String observations;
+	
+	
+
 	public String getItem() {
 		return item;
 	}
@@ -47,19 +50,19 @@ public class Order implements java.io.Serializable {
 	public void setItem(String item) {
 		this.item = item;
 	}
-	public Boolean getAcceptedByRestaurant() {
+	public Boolean isAcceptedByRestaurant() {
 		return acceptedByRestaurant;
 	}
 	public void setAcceptedByRestaurant(Boolean acceptedByRestaurant) {
 		this.acceptedByRestaurant = acceptedByRestaurant;
 	}
-	public Boolean getReadyToDeliver() {
+	public Boolean isReadyToDeliver() {
 		return readyToDeliver;
 	}
 	public void setReadyToDeliver(Boolean readyToDeliver) {
 		this.readyToDeliver = readyToDeliver;
 	}
-	public Boolean getDelivered() {
+	public Boolean isDelivered() {
 		return delivered;
 	}
 	public void setDelivered(Boolean delivered) {
@@ -70,6 +73,18 @@ public class Order implements java.io.Serializable {
 	}
 	public void setObservations(String observations) {
 		this.observations = observations;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	public Boolean getAcceptedByRestaurant() {
+		return acceptedByRestaurant;
+	}
+	public Boolean getReadyToDeliver() {
+		return readyToDeliver;
+	}
+	public Boolean getDelivered() {
+		return delivered;
 	}
 
 
