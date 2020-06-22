@@ -1,7 +1,11 @@
 # Compiled class file
 *.class
+*.classpath
+*.factorypath
+*.project
+.vscode/*
+.settings/*
 
-# Log file
 *.log
 
 # BlueJ files
