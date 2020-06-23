@@ -17,8 +17,6 @@ public class Order implements java.io.Serializable {
     private Boolean readyToDeliver;
     private Boolean delivered;
 	private String observations;
-	
-	
 
 	public String getItem() {
 		return item;
