@@ -1,4 +1,4 @@
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_9k0hIZfIEDicr8j3xB4Oqg" exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_zTrzEJfJEDibcubrj5mEZw" exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
   <bpmn2:itemDefinition id="_orderItem" structureRef="org.delivery.stayhome.model.Order"/>
   <bpmn2:itemDefinition id="__09F307D7-5866-4DD7-8CD2-0C51DF86CC89_SkippableInputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="__09F307D7-5866-4DD7-8CD2-0C51DF86CC89_PriorityInputXItem" structureRef="Object"/>
@@ -56,13 +56,13 @@
   <bpmn2:itemDefinition id="order-on-the-wayType" structureRef="org.delivery.stayhome.model.Order"/>
   <bpmn2:itemDefinition id="__F9C621D9-75E3-4A3A-AF38-8D6B074E381C_eventInputXItem" structureRef="org.delivery.stayhome.model.Order"/>
   <bpmn2:itemDefinition id="order-deliveredType" structureRef="org.delivery.stayhome.model.Order"/>
-  <bpmn2:message id="_9k8c8JfIEDicr8j3xB4Oqg" itemRef="order-returnedType" name="order-returned"/>
-  <bpmn2:message id="_9k9EAJfIEDicr8j3xB4Oqg" itemRef="order-being-preparedType" name="order-being-prepared"/>
-  <bpmn2:message id="_9k9EAZfIEDicr8j3xB4Oqg" itemRef="order-ready-to-deliverType" name="order-ready-to-deliver"/>
-  <bpmn2:message id="_9k9rEJfIEDicr8j3xB4Oqg" itemRef="order-on-the-wayType" name="order-on-the-way"/>
-  <bpmn2:message id="_9k9rEZfIEDicr8j3xB4Oqg" itemRef="order-rejectedType" name="order-rejected"/>
-  <bpmn2:message id="_9k9rEpfIEDicr8j3xB4Oqg" itemRef="order-on-the-wayType" name="order-on-the-way"/>
-  <bpmn2:message id="_9k9rE5fIEDicr8j3xB4Oqg" itemRef="order-deliveredType" name="order-delivered"/>
+  <bpmn2:message id="_zTygwJfJEDibcubrj5mEZw" itemRef="order-returnedType" name="order-returned"/>
+  <bpmn2:message id="_zTygwZfJEDibcubrj5mEZw" itemRef="order-being-preparedType" name="order-being-prepared"/>
+  <bpmn2:message id="_zTzH0JfJEDibcubrj5mEZw" itemRef="order-ready-to-deliverType" name="order-ready-to-deliver"/>
+  <bpmn2:message id="_zTzH0ZfJEDibcubrj5mEZw" itemRef="order-on-the-wayType" name="order-on-the-way"/>
+  <bpmn2:message id="_zTzH0pfJEDibcubrj5mEZw" itemRef="order-rejectedType" name="order-rejected"/>
+  <bpmn2:message id="_zTzH05fJEDibcubrj5mEZw" itemRef="order-on-the-wayType" name="order-on-the-way"/>
+  <bpmn2:message id="_zTzH1JfJEDibcubrj5mEZw" itemRef="order-deliveredType" name="order-delivered"/>
   <bpmn2:process id="order" drools:packageName="org.delivery.stayhome" drools:version="1.0" drools:adHoc="false" name="order" isExecutable="true" processType="Public">
     <bpmn2:extensionElements>
       <drools:import name="org.delivery.stayhome.model.Order"/>
@@ -219,7 +219,7 @@
       <bpmn2:inputSet>
         <bpmn2:dataInputRefs>_F9C621D9-75E3-4A3A-AF38-8D6B074E381C_eventInputX</bpmn2:dataInputRefs>
       </bpmn2:inputSet>
-      <bpmn2:messageEventDefinition drools:msgref="order-delivered" messageRef="_9k9rE5fIEDicr8j3xB4Oqg"/>
+      <bpmn2:messageEventDefinition drools:msgref="order-delivered" messageRef="_zTzH1JfJEDibcubrj5mEZw"/>
     </bpmn2:endEvent>
     <bpmn2:scriptTask id="_8E5CF3D2-E326-42E2-82C3-10DE7C63ECD6" name="Calculate Loyalty Points" scriptFormat="http://www.java.com/java">
       <bpmn2:extensionElements>
@@ -247,7 +247,7 @@
       <bpmn2:inputSet>
         <bpmn2:dataInputRefs>_20B72189-E025-4623-A157-A06430ABC341_eventInputX</bpmn2:dataInputRefs>
       </bpmn2:inputSet>
-      <bpmn2:messageEventDefinition drools:msgref="order-on-the-way" messageRef="_9k9rEpfIEDicr8j3xB4Oqg"/>
+      <bpmn2:messageEventDefinition drools:msgref="order-on-the-way" messageRef="_zTzH05fJEDibcubrj5mEZw"/>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:endEvent id="_00C173F9-8C4D-4CD5-8B99-19FF70856ABF" name="Notify Customer">
       <bpmn2:extensionElements>
@@ -264,7 +264,7 @@
       <bpmn2:inputSet>
         <bpmn2:dataInputRefs>_00C173F9-8C4D-4CD5-8B99-19FF70856ABF_eventInputX</bpmn2:dataInputRefs>
       </bpmn2:inputSet>
-      <bpmn2:messageEventDefinition drools:msgref="order-rejected" messageRef="_9k9rEZfIEDicr8j3xB4Oqg"/>
+      <bpmn2:messageEventDefinition drools:msgref="order-rejected" messageRef="_zTzH0pfJEDibcubrj5mEZw"/>
     </bpmn2:endEvent>
     <bpmn2:intermediateCatchEvent id="_361B2557-307C-4D64-A5F2-BD5FE227EC83" name="Motoboy Assigned">
       <bpmn2:extensionElements>
@@ -275,10 +275,14 @@
       <bpmn2:incoming>_2AC5ADE5-5257-457D-947A-F0D224D76BB0</bpmn2:incoming>
       <bpmn2:outgoing>_77BBEB44-679D-4156-BA73-E75ED76EFB0E</bpmn2:outgoing>
       <bpmn2:dataOutput id="_361B2557-307C-4D64-A5F2-BD5FE227EC83_eventOutputX" drools:dtype="org.delivery.stayhome.model.Order" itemSubjectRef="__361B2557-307C-4D64-A5F2-BD5FE227EC83_eventOutputXItem" name="event"/>
+      <bpmn2:dataOutputAssociation>
+        <bpmn2:sourceRef>_361B2557-307C-4D64-A5F2-BD5FE227EC83_eventOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>order</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
       <bpmn2:outputSet>
         <bpmn2:dataOutputRefs>_361B2557-307C-4D64-A5F2-BD5FE227EC83_eventOutputX</bpmn2:dataOutputRefs>
       </bpmn2:outputSet>
-      <bpmn2:messageEventDefinition drools:msgref="order-on-the-way" messageRef="_9k9rEJfIEDicr8j3xB4Oqg"/>
+      <bpmn2:messageEventDefinition drools:msgref="order-on-the-way" messageRef="_zTzH0ZfJEDibcubrj5mEZw"/>
     </bpmn2:intermediateCatchEvent>
     <bpmn2:intermediateThrowEvent id="_4EB138C8-354F-49F4-A4A9-2602E50149CA" name="Notify Motoboys">
       <bpmn2:extensionElements>
@@ -296,7 +300,7 @@
       <bpmn2:inputSet>
         <bpmn2:dataInputRefs>_4EB138C8-354F-49F4-A4A9-2602E50149CA_eventInputX</bpmn2:dataInputRefs>
       </bpmn2:inputSet>
-      <bpmn2:messageEventDefinition drools:msgref="order-ready-to-deliver" messageRef="_9k9EAZfIEDicr8j3xB4Oqg"/>
+      <bpmn2:messageEventDefinition drools:msgref="order-ready-to-deliver" messageRef="_zTzH0JfJEDibcubrj5mEZw"/>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:intermediateThrowEvent id="_14E7DA8A-5F5F-4A43-9826-B73E3A28A3B9" name="Order being prepared">
       <bpmn2:extensionElements>
@@ -314,7 +318,7 @@
       <bpmn2:inputSet>
         <bpmn2:dataInputRefs>_14E7DA8A-5F5F-4A43-9826-B73E3A28A3B9_eventInputX</bpmn2:dataInputRefs>
       </bpmn2:inputSet>
-      <bpmn2:messageEventDefinition drools:msgref="order-being-prepared" messageRef="_9k9EAJfIEDicr8j3xB4Oqg"/>
+      <bpmn2:messageEventDefinition drools:msgref="order-being-prepared" messageRef="_zTygwZfJEDibcubrj5mEZw"/>
     </bpmn2:intermediateThrowEvent>
     <bpmn2:startEvent id="_5D13614D-BB35-4131-9C0A-3F5238F7119E">
       <bpmn2:outgoing>_3E14B670-5EBA-4638-A51B-EAC9F783DD1A</bpmn2:outgoing>
@@ -369,6 +373,10 @@
           <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[_BEE4932A-0B68-4415-B4C5-B8CCD59DD2E1_SkippableInputX]]></bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation>
+        <bpmn2:sourceRef>_BEE4932A-0B68-4415-B4C5-B8CCD59DD2E1_orderOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>order</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
     </bpmn2:userTask>
     <bpmn2:userTask id="_662BB1B5-DCB4-4C4E-AE6A-2F1BCDDC39AA" name="Accept Order">
       <bpmn2:extensionElements>
@@ -414,8 +422,8 @@
         <bpmn2:sourceRef>_662BB1B5-DCB4-4C4E-AE6A-2F1BCDDC39AA_orderOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>order</bpmn2:targetRef>
       </bpmn2:dataOutputAssociation>
-      <bpmn2:potentialOwner id="_9lTpUJfIEDicr8j3xB4Oqg">
-        <bpmn2:resourceAssignmentExpression id="_9lUQYJfIEDicr8j3xB4Oqg">
+      <bpmn2:potentialOwner id="_zUBxUJfJEDibcubrj5mEZw">
+        <bpmn2:resourceAssignmentExpression id="_zUBxUZfJEDibcubrj5mEZw">
           <bpmn2:formalExpression>karina</bpmn2:formalExpression>
         </bpmn2:resourceAssignmentExpression>
       </bpmn2:potentialOwner>
@@ -435,7 +443,7 @@
       <bpmn2:inputSet>
         <bpmn2:dataInputRefs>_C14C45F8-2CB1-4FBA-86E0-8C43E2FEB0B7_eventInputX</bpmn2:dataInputRefs>
       </bpmn2:inputSet>
-      <bpmn2:messageEventDefinition drools:msgref="order-returned" messageRef="_9k8c8JfIEDicr8j3xB4Oqg"/>
+      <bpmn2:messageEventDefinition drools:msgref="order-returned" messageRef="_zTygwJfJEDibcubrj5mEZw"/>
     </bpmn2:endEvent>
     <bpmn2:exclusiveGateway id="_C7CF9035-25BB-466F-9537-474C87A155EF" drools:dg="_F7042B61-0672-4C81-9559-4B129D84E2BF" name="Delivered?" gatewayDirection="Diverging" default="_F7042B61-0672-4C81-9559-4B129D84E2BF">
       <bpmn2:extensionElements>
@@ -487,6 +495,10 @@
           <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[_09F307D7-5866-4DD7-8CD2-0C51DF86CC89_SkippableInputX]]></bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation>
+        <bpmn2:sourceRef>_09F307D7-5866-4DD7-8CD2-0C51DF86CC89_orderOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>order</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
     </bpmn2:userTask>
     <bpmn2:textAnnotation id="_3C60A78E-B883-4E95-8A94-E4CFB689AEE3" name="Motoboy:&#10;Registers that if the order was delivered">
       <bpmn2:extensionElements>
@@ -752,7 +764,7 @@ Call Center</bpmn2:text>
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_9k0hIZfIEDicr8j3xB4Oqg</bpmn2:source>
-    <bpmn2:target>_9k0hIZfIEDicr8j3xB4Oqg</bpmn2:target>
+    <bpmn2:source>_zTrzEJfJEDibcubrj5mEZw</bpmn2:source>
+    <bpmn2:target>_zTrzEJfJEDibcubrj5mEZw</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
